@@ -1,0 +1,33 @@
+- name: Download and unarchive Wordpress
+  unarchive:
+    src: http://wordpress.org/latest.tar.gz
+    dest: /var/www/html/
+    remote_src: yes
+
+- name: ownership wordpress
+  file:
+    path: /var/www/html/wordpress
+    owner: www-data
+    group: www-data
+    recurse: yes
+
+- name: Copy wordpress conf
+  template:
+    src: templates/wp-config.php
+    dest: /var/www/html/wordpress
+
+- name: Override Apache default conf
+  template:
+    src: templates/000-default.conf
+    dest: /etc/apache2/sites-available/
+
+- name: Copy .htaccess
+  template:
+    src: templates/.htaccess
+    dest: /var/www/html
+
+- name: restart apache2
+  service:
+    name: apache2
+    state: restarted
+

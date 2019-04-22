@@ -1,0 +1,11 @@
+- name: Install and start PHP
+  apt:
+    name: php
+    update-cache: yes
+
+- name: Install PHP Packages
+  apt: 
+    name:
+      - libapache2-mod-php
+      - php-mysql
+  become: true

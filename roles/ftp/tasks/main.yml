@@ -1,0 +1,4 @@
+- name: install FTP server
+  apt:
+    name: vsftpd
+    state: latest

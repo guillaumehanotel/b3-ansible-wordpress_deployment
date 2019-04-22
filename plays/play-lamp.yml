@@ -1,0 +1,19 @@
+- hosts: web
+  become: true
+  roles:
+    - common
+    - apache2
+    - mysql
+    - php
+    - ftp
+    - wordpress-db
+    - wordpress-web
+
+
+#    
+#- hosts: db
+#  become: true
+#  roles:
+#    - common
+#    - mysql
+#    - wordpress-db
