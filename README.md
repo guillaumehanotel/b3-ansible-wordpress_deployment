@@ -3,7 +3,7 @@ Par Guillaume HANOTEL
 
 Le projet consiste à déployer un site wordpress sur un Cloud Provider avec 1 serveur de base de données et 1 serveur web.
 
-Ici le projet ne fonctionne que sur 1 machine car la liaison avec le serveur de base de données ne fonctionnait pas.
+Ici le projet ne fonctionne que sur 1 machine car il y a un dysfonctionnement lors de la connexion avec la base de données que je n'ai pas réussi à résoudre.
 
 Le projet a été réalisé avec Ubuntu 18.04
 
